@@ -1,16 +1,22 @@
-## Hi there 👋
+# Daniel Klas
 
-<!--
-**DKFuH/DKFuH** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I build practical tools for business logic, workflows, and operational clarity.
 
-Here are some ideas to get you started:
+Currently working on [**OrgScript**](https://github.com/DKFuH/OrgScript), a human-readable, AI-friendly description language for business logic and operational systems.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+![Business Logic](https://img.shields.io/badge/Business--Logic-FFD700?style=for-the-badge&logo=enterprise&logoColor=black)
+![Workflow Design](https://img.shields.io/badge/Workflow--Design-238636?style=for-the-badge&logo=githubactions&logoColor=white)
+![AI Friendly](https://img.shields.io/badge/AI--Friendly-0078D4?style=for-the-badge&logo=openai&logoColor=white)
+
+---
+
+## What OrgScript looks like
+
+```yaml
+process LeadQualification
+  when lead.created
+  if lead.budget < 10000
+    transition lead.status -> "disqualified"
+    notify sales "Budget below threshold"
+    stop
+  transition lead.status -> "qualified"
